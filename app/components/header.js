@@ -1,11 +1,19 @@
 "use client"
 // components/Header.js
+// components/Header.js
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -17,18 +25,36 @@ const Header = () => {
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
-            <Link href="#services" className="text-gray-600 hover:text-[#74B1C9]">
+            <a
+              onClick={() => scrollToSection('services')}
+              className="cursor-pointer text-gray-600 hover:text-[#74B1C9]"
+            >
               Services
-            </Link>
-            <Link href="#products" className="text-gray-600 hover:text-[#74B1C9]">
+            </a>
+            <a
+              onClick={() => scrollToSection('products')}
+              className="cursor-pointer text-gray-600 hover:text-[#74B1C9]"
+            >
               Products
-            </Link>
-            <Link href="#stats" className="text-gray-600 hover:text-[#74B1C9]">
+            </a>
+            <a
+              onClick={() => scrollToSection('stats')}
+              className="cursor-pointer text-gray-600 hover:text-[#74B1C9]"
+            >
               Stats
-            </Link>
-            <Link href="#testimonial" className="text-gray-600 hover:text-[#74B1C9]">
+            </a>
+            <a
+              onClick={() => scrollToSection('testimonial')}
+              className="cursor-pointer text-gray-600 hover:text-[#74B1C9]"
+            >
               Testimonial
-            </Link>
+            </a>
+            <a
+            onClick={() => scrollToSection('contact')}
+            className="cursor-pointer text-gray-600 hover:text-[#74B1C9]"
+          >
+            Contac Us
+          </a>
             <a
               href="whatsapp://send?phone=+923024569714"
               className="text-gray-600 hover:text-[#74B1C9] flex items-center gap-3"
@@ -83,24 +109,48 @@ const Header = () => {
           <nav className="md:hidden">
             <ul className="flex flex-col space-y-4 mt-4">
               <li>
-                <Link href="#services" className="text-gray-600 hover:text-[#74B1C9]">
+                <a
+                  onClick={() => {
+                    scrollToSection('services');
+                    setIsOpen(false); // Close the mobile menu after click
+                  }}
+                  className="cursor-pointer text-gray-600 hover:text-[#74B1C9]"
+                >
                   Services
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#products" className="text-gray-600 hover:text-[#74B1C9]">
+                <a
+                  onClick={() => {
+                    scrollToSection('products');
+                    setIsOpen(false); // Close the mobile menu after click
+                  }}
+                  className="cursor-pointer text-gray-600 hover:text-[#74B1C9]"
+                >
                   Products
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#stats" className="text-gray-600 hover:text-[#74B1C9]">
+                <a
+                  onClick={() => {
+                    scrollToSection('stats');
+                    setIsOpen(false); // Close the mobile menu after click
+                  }}
+                  className="cursor-pointer text-gray-600 hover:text-[#74B1C9]"
+                >
                   Stats
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#testimonial" className="text-gray-600 hover:text-gray-800">
+                <a
+                  onClick={() => {
+                    scrollToSection('testimonial');
+                    setIsOpen(false); // Close the mobile menu after click
+                  }}
+                  className="cursor-pointer text-gray-600 hover:text-gray-800"
+                >
                   Testimonial
-                </Link>
+                </a>
               </li>
               <li>
                 <a
