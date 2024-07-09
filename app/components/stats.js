@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const stats = () => {
   return (
-    <section className="text-gray-600 body-font px-24">
+    <section id="stats" className="text-gray-600 body-font px-24">
       <div className="container py-24 px-12 mx-auto flex flex-wrap">
         <div className="text-center mb-20 w-full">
           <h1 className="text-5xl text-center font-bold title-font text-gray-900 mb-4">Our <span className='text-[#74B1C9]'>Achievements</span></h1>
