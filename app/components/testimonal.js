@@ -18,7 +18,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="text-gray-600 body-font px-24">
+    <section id="testimonial" className="text-gray-600 body-font px-24">
       <div className="container py-24 px-12 mx-auto">
         <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">Doesn't Seem Legit?<br/> Look at these <span className='font-bold text-[#74B1C9]'> Testimonials</span></h1>
         <div className="flex flex-wrap -m-4">
