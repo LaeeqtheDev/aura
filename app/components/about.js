@@ -43,7 +43,7 @@ const About = () => {
     <section id="products" className="text-gray-600 body-font px-24">
       <div className="container py-24 px-12 mx-auto">
         <div className="text-center mb-20">
-          <h1 className="font-bold title-font text-gray-900 text-5xl mb-4">Our Products</h1>
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Products</h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500">
             Check out our range of products designed to cater to your needs.
           </p>
