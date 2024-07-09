@@ -7,7 +7,7 @@ const stats = () => {
     <section id="stats" className="text-gray-600 body-font px-24">
       <div className="container py-24 px-12 mx-auto flex flex-wrap">
         <div className="text-center mb-20 w-full">
-          <h1 className="text-5xl text-center font-bold title-font text-gray-900 mb-4 text-[#74B1C9]">Our Achievements</h1>
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#74B1C9]">Our Achievements</h1>
           <p className="text-base text-center leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
             Discover the numbers behind our success. Our stats speak for themselves.
           </p>
